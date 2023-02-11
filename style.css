@@ -32,7 +32,7 @@ nav a {
     text-transform: uppercase;
 }
 
-main{
+main {
     padding: 64px 24px 24px 24px;
 }
 
@@ -65,11 +65,11 @@ main .pre-order {
     line-height: 26px;
 }
 
-.main-img{
+.main-img {
     margin-top: 35px;
 }
 
-.keyboard-img{
+.keyboard-img {
     width: 135%;
     padding-top: 35px;
     border-radius: 20px;
@@ -84,20 +84,23 @@ main .pre-order {
     border-radius: 8px;
 }
 
-/*Two image*/ /*Two image*/ /*Two image*/ /*Two image*/
+/*Two image*/
+/*Two image*/
+/*Two image*/
+/*Two image*/
 .collage {
     display: flex;
     padding: 20px;
 }
 
-.img-one{
+.img-one {
     width: 144px;
     height: 226px;
     margin-left: -50px;
     /*need radius*/
 }
 
-.img-two{
+.img-two {
     width: 440px;
     height: 226px;
     padding-left: 20px;
@@ -129,6 +132,11 @@ article {
     width: 327px;
 }
 
+.articles-parent {
+    display: flex;
+    justify-content: center;
+}
+
 article h3 {
     font-size: 24px;
     line-height: 28px;
@@ -141,7 +149,6 @@ article h3 {
 article p {
     padding-top: 24px;
     color: hsla(220, 23%, 58%, 1);
-    padding-bottom: 64px;
 }
 
 article h2 {
@@ -171,6 +178,10 @@ article img {
     height: 65px;
 }
 
+.child {
+    margin-top: 64px;
+}
+
 .first-child {
     margin-top: 111px;
 }
@@ -185,4 +196,114 @@ footer {
 
 footer span {
     font-weight: bold;
+}
+
+/*TABLET TABLET TABLET TABLET*/
+
+@media (min-width: 768px) {
+    header {
+        padding: 49px 40px 0px 39px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        column-gap: 150px;
+        padding: 131px 0px 142px 39px;
+    }
+
+    .main-img {
+        margin-top: 0;
+    }
+
+    main .pre-order {
+        margin-top: 39px;
+    }
+
+    .keyboard-img {
+        width: 150%;
+        padding-top: 0;
+        border-radius: 20px;
+        height: 400px;
+    }
+
+    .collage {
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    .img-one {
+        width: 250px;
+        height: 300px;
+        margin-left: 0px;
+        width: 30%;
+    }
+
+    .img-two {
+        width: 50%;
+        height: 300px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .articles {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 69px;
+        margin-left: 39px;
+        margin-top: 142px;
+    }
+
+    article {
+        text-align: unset;
+    }
+
+    article p {
+        width: 281px;
+        padding-top: 0;
+    }
+
+    article h3 {
+        width: 339px;
+        /*isnot working*/
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        text-align: unset;
+        justify-content: flex-start;
+        padding-left: 39px;
+    }
+
+    .reviews {
+        margin-top: 62px;
+    }
+
+    .main p {
+        width: 398px;
+    }
+
+    .main h2 {
+        text-align: unset;
+    }
+
+    .first-child {
+        margin-top: 64px;
+    }
+
+    footer {
+        margin-top: 142px;
+        padding-top: 0;
+    }
+
+    footer p {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*DEKSTOP DEKSTOP DEKSTOP DEKSTOP*/
 }
