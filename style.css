@@ -5,21 +5,21 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Barlow', sans-serif;
+    width: 100vw;
 }
 
 a {
     text-decoration: none;
 }
 
-header {
-    padding: 32px 24px 24px 24px;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 32px 24px 24px 24px;
 }
 
 nav a {
@@ -65,17 +65,6 @@ main .pre-order {
     line-height: 26px;
 }
 
-.main-img {
-    margin-top: 35px;
-}
-
-.keyboard-img {
-    width: 135%;
-    padding-top: 35px;
-    border-radius: 20px;
-    /*need radius*/
-}
-
 .pre-order a {
     text-transform: uppercase;
     color: hsla(0, 0%, 100%, 1);
@@ -84,38 +73,67 @@ main .pre-order {
     border-radius: 8px;
 }
 
-/*Two image*/
-/*Two image*/
-/*Two image*/
-/*Two image*/
 .collage {
     display: flex;
     padding: 20px;
 }
 
-.img-one {
+
+.keyboard-img-tablet,
+.keyboard-img-dekstop {
+    display: none;
+}
+
+
+.keyboard {
+    width: 726px;
+    border-radius: 20px;
+    width: 115%;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.keyboard-img-mobile {
+    width: 106%;
+    height: auto;
+    padding-top: 50px;
+}
+
+.img-phone-tablet,
+.img-phone-dekstop {
+    display: none;
+}
+
+
+.phoneandkeyboard {
     width: 144px;
     height: 226px;
+    background-color: hsla(22, 88%, 52%, 1);
     margin-left: -50px;
-    /*need radius*/
+    border-radius: 15%;
 }
 
-.img-two {
-    width: 440px;
+.img-phone-mobile {
+    width: 144px;
     height: 226px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    border-radius: 15%;
+}
+
+.img-glass-tablet,
+.img-glass-dekstop {
+    display: none;
+}
+
+.glassandkeyboard{}
+
+.img-glass-mobile {
+    height: 226px;
+    width: 440px;
     padding-left: 20px;
     padding-right: 200px;
-    /*need radius*/
-}
-
-
-.reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 32px;
-
+    border-radius: 10%;
 }
 
 article {
@@ -198,10 +216,18 @@ footer span {
     font-weight: bold;
 }
 
+.left-square {
+    display: none;
+}
+
+.right-square {
+    display: none;
+}
+
 /*TABLET TABLET TABLET TABLET*/
 
 @media (min-width: 768px) {
-    header {
+    nav {
         padding: 49px 40px 0px 39px;
     }
 
@@ -212,39 +238,56 @@ footer span {
         padding: 131px 0px 142px 39px;
     }
 
-    .main-img {
-        margin-top: 0;
-    }
-
     main .pre-order {
         margin-top: 39px;
     }
 
-    .keyboard-img {
-        width: 150%;
-        padding-top: 0;
-        border-radius: 20px;
-        height: 400px;
-    }
 
     .collage {
         display: flex;
         justify-content: space-around;
         padding: 0px;
+        padding-left: 70px;
+        padding-right: 70px;
+        column-gap: 30px;
     }
 
-    .img-one {
-        width: 250px;
-        height: 300px;
-        margin-left: 0px;
-        width: 30%;
+    .keyboard{}
+    .keyboard-img-tablet{}
+
+    .img-phone-mobile, .img-phone-dekstop {
+        display: none;
     }
 
-    .img-two {
-        width: 50%;
-        height: 300px;
+    .phoneandkeyboard {
+        height: 554px;
+        width: 354px;
+        border-radius: 10%;
+        margin-left: 0;
+    }
+
+    .img-phone-tablet {
+        display: block;
+        border-radius: 10%;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+        width: 354px;
+        height: 100%;
+    }
+
+    .img-glass-mobile,
+    .img-glass-dekstop {
+        display: none;
+    }
+
+    .glassandkeyboard {}
+
+    .img-glass-tablet {
+        display: block;
         padding-left: 0px;
         padding-right: 0px;
+        height: 554px;
+        width: 400px;
     }
 
     .articles {
@@ -305,5 +348,135 @@ footer span {
         justify-content: center;
     }
 
+    .left-square {
+        display: none;
+    }
+
+    .right-square {
+        display: none;
+    }
+
     /*DEKSTOP DEKSTOP DEKSTOP DEKSTOP*/
+
+    @media (min-width: 1440px) {
+        nav {
+            padding: 70px 165px 0px 165px;
+        }
+
+        main {
+            padding: 70px 170px 0px 165px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .articles {
+            margin-top: 131px;
+            margin-left: 165px;
+            margin-right: 165px;
+            column-gap: 30px;
+            flex-wrap: nowrap;
+            width: 78%;
+        }
+
+        .articles p {
+            width: 255px;
+            margin-top: 24px;
+        }
+
+        .articles h3 {
+            width: 255px;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+      .keyboard{
+
+      }
+
+      .keyboard-img-dekstop{
+
+      }
+
+        .img-phone-mobile, .img-phone-tablet {
+            display: none;
+        }
+        
+        .phoneandkeyboard {
+            width: 300px;
+            height: auto;
+            opacity: 1;
+        }
+
+        .img-phone-dekstop {
+            mix-blend-mode: multiply;
+            opacity: 0.75;
+            display: block;
+            border-radius: 10%;
+            width: 300px;
+            height: auto;
+        }
+
+        .img-glass-mobile,
+        .img-glass-tablet {
+            display: none;
+        }
+
+        .glassandkeyboard {
+            width: 150%;
+            height: auto;
+        }
+
+        .img-glass-dekstop {
+            display: block;
+            width: 100%;
+            border-radius: 8%;
+        }
+
+        .main p {
+            width: 255px;
+            margin-top: 27px;
+        }
+
+        .main {
+            padding-left: 50px;
+        }
+
+        .reviews {
+            margin-top: 0;
+        }
+
+        .first-child h3 {
+            width: 200px;
+        }
+
+        .last-child h3 {
+            width: 200px;
+        }
+
+        .left-square {
+            display: block;
+            margin-right: -250px;
+            z-index: -1;
+            margin-bottom: 270px;
+        }
+
+        .right-square {
+            display: block;
+            position: absolute;
+            width: 255px;
+            height: 236px;
+            left: -280px;
+            top: 265px;
+        }
+
+        .collage {
+            max-width: 100%;
+            padding-left: 165px;
+            padding-right: 165px;
+        }
+    }
 }
