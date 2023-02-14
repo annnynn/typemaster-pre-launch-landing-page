@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 27px 24px 0px 24px;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+}
+
+button {
+    padding: 11px 14px 11px 14px;
+    border: 0;
+    border-radius: 8px;
+    min-height: 48px;
+    min-width: 150px;
+}
+
+header .button {
+    background-color: hsla(198, 28%, 93%, 1);
+}
+
+.tablet-keyboard {
+    display: none;
+}
+
+.desktop-keyboard {
+    display: none;
+}
+
+.mobile-keyboard {
+    width: 250px;
+    height: 200px;
+    margin-top: 68px;
+}
+
+main{
+    max-width: 100%;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+}
+
+.review .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review p {
+    min-width: 327px;
+    max-width: 445px;
+    margin-top: 32px;
+}
+.row{
+    display: flex;
+    border: 2px solid red;
+    margin-top: 32px;
+}
+
+main .release{
+    margin-left: 32px;
+}
+
+main .button {    
+    background-color: hsla(22, 88%, 52%, 1);
+}
+
+
+.square {
+    display: none;
+}
+
+.collage{
+    display: flex;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   row-gap: 64px;
+   margin-top: 111px;
+}
+
+.details img{
+    width: 68px;
+    height: 68px;
+    background-color: hsla(22, 88%, 52%, 1);
+
+}
+
+footer{
+    margin-top: 96px;
+}
+
+
+@media (min-width: 768px) {
+
+    body{
+        padding: 49px 40px 0px 40px;
+    }
+
+    main{
+        gap: 30px;
+    }
+
+    .review{
+        margin-top: 131px;
+    }
+
+    .tablet-keyboard {
+        display: flex;
+    }
+
+
+    .tablet-keyboard {
+        width: 350px;
+        height: 300px;
+        margin-top: 68px;
+    }
+
+    .review {
+        justify-content: center;
+    }
+
+    .mobile-keyboard,
+    .desktop-keyboard {
+        display: none;
+    }
+
+    main {
+        display: flex;
+    }
+
+    .square {
+       display: none;
+    }
+
+    .design-review{
+        display: flex;
+    }
+
+    /*dekstop
+    
+     .middle{
+        display:flex;
+     }
+
+    */
+
+    .details{
+        flex-direction: row;
+    }
+
+
+    @media (min-width:1440px){
+        .pair{
+            display: flex;
+        }
+    }
+
+    
+}
