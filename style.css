@@ -10,7 +10,29 @@ body {
     align-items: center;
     height: 100vh;
     padding: 27px 24px 0px 24px;
+    font-family: 'Barlow', sans-serif;
 }
+
+h1{
+    font-size:48px;
+    font-weight: 900;
+    line-height: 48px;
+    color: hsla(220, 51%, 17%, 1);
+}
+
+h2{
+    font-weight: 900;
+    color: hsla(220, 51%, 17%, 1);
+}
+
+p{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: hsla(220, 23%, 58%, 1);
+}
+
+
 
 header {
     display: flex;
@@ -18,13 +40,7 @@ header {
     justify-content: space-between;
 }
 
-
-.flex{
-    display: flex;
-    align-items: center;
-}
-
-.logo{
+.logo {
     width: 40px;
     height: 40px;
 }
@@ -35,10 +51,20 @@ button {
     border-radius: 8px;
     min-height: 48px;
     min-width: 150px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
-header .button {
-    background-color: hsla(198, 28%, 93%, 1);
+header, button {
+    font-weight: 700;
+    color: hsla(220, 50%, 17%, 1);
+}
+
+h4{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: hsla(221, 23%, 58%, 1);
 }
 
 .tablet-keyboard {
@@ -50,13 +76,40 @@ header .button {
 }
 
 .mobile-keyboard {
-    width: 250px;
-    height: 200px;
+    width: 373px;
+    height: 320px;
     margin-top: 68px;
+    margin-left: 0px;
+    border-radius: 20px;
+
+    
 }
 
-main{
+main {
     max-width: 100%;
+}
+
+.middle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 300px;
+}
+
+.collage {
+    column-gap: 30px;
+}
+
+.phone-keyboard{
+   width: 150px;
+   margin-left: -50px;
+   border-radius: 20px;
+}
+
+.glass-keyboard{
+   width: 200px;
+   border-radius: 20px;
 }
 
 .review {
@@ -65,7 +118,34 @@ main{
     margin-top: 64px;
 }
 
-.review .container{
+.row button{
+    background-color: hsla(22, 88%, 52%, 1);
+   color: hsla(0, 0%, 100%, 1);
+}
+
+
+.design-review {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.design-review p {
+    width: 398px;
+    margin-top: 24px;
+    width: 327px;
+}
+
+.design-review h2 {
+    font-size: 32px;
+    line-height: 36px;
+    width: 255px;
+    text-transform: uppercase;
+}
+
+.review .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,17 +156,22 @@ main{
     max-width: 445px;
     margin-top: 32px;
 }
-.row{
+
+.row {
     display: flex;
-    border: 2px solid red;
+    align-items: center;
     margin-top: 32px;
 }
 
-main .release{
+.row h4 {
     margin-left: 32px;
 }
 
-main .button {    
+main .release {
+    margin-left: 32px;
+}
+
+main .button {
     background-color: hsla(22, 88%, 52%, 1);
 }
 
@@ -95,44 +180,84 @@ main .button {
     display: none;
 }
 
-.collage{
+.collage {
     display: flex;
 }
 
-.details{
+.details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-   row-gap: 64px;
-   margin-top: 111px;
+    row-gap: 64px;
+    margin-top: 111px;
 }
 
-.details img{
+.details img {
     width: 68px;
     height: 68px;
     background-color: hsla(22, 88%, 52%, 1);
 
 }
 
-footer{
+.box img{
+    object-fit: none;
+}
+
+
+.box h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 40px;
+    width: 327px;
+}
+
+.box p {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+
+footer {
     margin-top: 96px;
+    padding-bottom: 50px;
 }
 
 
 @media (min-width: 768px) {
 
-    body{
+    body {
         padding: 49px 40px 0px 40px;
     }
 
-    main{
-        gap: 30px;
+    header{
+        max-width: 688px;
     }
 
-    .review{
+    main {
+        gap: 30px;
+        max-width: 688px;
+    }
+
+    .review {
         margin-top: 131px;
+    }
+
+    .review h2 {
+        width: 339px;
+    }
+
+    .review p {
+        padding-top: 34px;
+        width: 339px;
+    }
+
+    .review h4 {
+        padding-top: 0px;
+        margin-left: 37px;
     }
 
     .tablet-keyboard {
@@ -141,13 +266,10 @@ footer{
 
 
     .tablet-keyboard {
-        width: 350px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
         margin-top: 68px;
-    }
-
-    .review {
-        justify-content: center;
+        margin-left: 50px;
     }
 
     .mobile-keyboard,
@@ -160,31 +282,173 @@ footer{
     }
 
     .square {
-       display: none;
+        display: none;
     }
 
-    .design-review{
+    .design-review {
         display: flex;
     }
 
-    /*dekstop
-    
-     .middle{
-        display:flex;
-     }
+    .design-review p{
+        margin-top: 0;
+        width: 398px;
+        padding-right: 40px;
+    }
 
-    */
+  .collage{
+    justify-content: space-between;
+  }
 
-    .details{
-        flex-direction: row;
+  .middle{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    max-width: 100%;
+    flex-direction: column;
+    max-width: 688px;
+  }
+
+  .phone-keyboard{
+    width: 270px;
+    margin-left: 0;
+  }
+
+  .glass-keyboard{
+    width: 478px;
+  }
+
+  .design-review{
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: unset;
+}
+
+    .details {
+        margin: auto;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: unset;
+        max-width: 688px;
+        margin-top: 142px;
+    }
+
+    .details {
+        column-gap: 69px;
+    }
+
+    .box {
+        text-align: start;
+        width: 281px;
+    }
+
+    .box h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 40px;
+    }
+
+    .box p {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        margin-top: 24px;
+    }
+
+    .row {
+        text-align: center;
+        align-items: center;
+    }
+
+    .review p {
+        margin-top: 0;
     }
 
 
-    @media (min-width:1440px){
-        .pair{
+    @media (min-width:1440px) {
+
+        body {
+            padding: 64px 165px 0px 165px;
+        }
+
+        header{
+            width: 1110px;
+        }
+
+        main {    
+            justify-content: unset;
+            width: 100%;
+            max-width: 1110px;
+            justify-content: space-between;
+        }
+
+        header {
+            max-width: 1440px;
+            justify-content: space-between;
+        }
+
+        .review {
+            margin-top: 152px;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-top: 96px;
+            width: 1110px;
+            max-width: 100%;
+        }
+
+        .collage {
+            gap: 30px;
+        }
+
+        .design-review {
+            flex-direction: column;
+            padding-left: 100px;
+        }
+
+        .design-review h2 {
+            text-transform: uppercase;
+            font-size: 32px;
+            width: 255px;
+        }
+
+        .design-review p {
+            margin-top: 27px;
+            max-width: 255px;
+        }
+
+        .details {
+            column-gap: 30px;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .pair {
             display: flex;
         }
+
+        .box {
+            text-align: start;
+            width: 255px;
+
+        }
+
+        .box h2 {
+            margin-top: 48px;
+        }
+
+        .box p {
+            margin-top: 24px;
+        }
+
+        footer {
+            padding-bottom: 38px;
+        }
+
     }
 
-    
+
 }
