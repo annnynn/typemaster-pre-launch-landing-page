@@ -13,19 +13,19 @@ body {
     font-family: 'Barlow', sans-serif;
 }
 
-h1{
-    font-size:48px;
+h1 {
+    font-size: 48px;
     font-weight: 900;
     line-height: 48px;
     color: hsla(220, 51%, 17%, 1);
 }
 
-h2{
+h2 {
     font-weight: 900;
     color: hsla(220, 51%, 17%, 1);
 }
 
-p{
+p {
     font-size: 16px;
     line-height: 26px;
     font-weight: 500;
@@ -36,7 +36,13 @@ p{
 
 header {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -55,24 +61,52 @@ button {
     line-height: 26px;
 }
 
-header, button {
+header,
+button {
     font-weight: 700;
     color: hsla(220, 50%, 17%, 1);
 }
 
-h4{
+h4 {
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
     color: hsla(221, 23%, 58%, 1);
 }
 
-.tablet-keyboard {
+main {
+    margin-top: 64px;
+    max-width: 100%;
+}
+
+.tablet-phone-keyboard,
+.dekstop-phone-keyboard {
     display: none;
 }
 
+.tablet-glass-keyboard,
+.dekstop-glass-keyboard {
+    display: none;
+}
+
+.tablet-keyboard,
 .desktop-keyboard {
     display: none;
+}
+
+
+.phone-phone-keyboard {
+    display: block;
+    width: 150px;
+    height: 200px;
+    margin-left: -65px;
+    border-radius: 20px;
+}
+
+.phone-glass-keyboard {
+    display: block;
+    width: 200px;
+    border-radius: 20px;
 }
 
 .mobile-keyboard {
@@ -81,12 +115,10 @@ h4{
     margin-top: 68px;
     margin-left: 0px;
     border-radius: 20px;
-
-    
 }
 
-main {
-    max-width: 100%;
+.collage {
+    column-gap: 25px;
 }
 
 .middle {
@@ -97,30 +129,26 @@ main {
     max-width: 300px;
 }
 
-.collage {
-    column-gap: 30px;
+
+.phone-keyboard {
+    width: 150px;
+    margin-left: -50px;
+    border-radius: 20px;
 }
 
-.phone-keyboard{
-   width: 150px;
-   margin-left: -50px;
-   border-radius: 20px;
-}
-
-.glass-keyboard{
-   width: 200px;
-   border-radius: 20px;
+.glass-keyboard {
+    width: 200px;
+    border-radius: 20px;
 }
 
 .review {
     display: flex;
     flex-direction: column;
-    margin-top: 64px;
 }
 
-.row button{
+.row button {
     background-color: hsla(22, 88%, 52%, 1);
-   color: hsla(0, 0%, 100%, 1);
+    color: hsla(0, 0%, 100%, 1);
 }
 
 
@@ -201,10 +229,13 @@ main .button {
 
 }
 
-.box img{
+.box img {
     object-fit: none;
 }
 
+.box {
+    width: 327px;
+}
 
 .box h2 {
     font-size: 24px;
@@ -215,7 +246,7 @@ main .button {
 
 .box p {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 26px;
     font-weight: 500;
     margin-top: 24px;
 }
@@ -226,6 +257,19 @@ footer {
     padding-bottom: 50px;
 }
 
+footer,
+span {
+    font-weight: 700;
+}
+
+.right-square{
+    display: none;
+}
+
+.left-square{
+    display: none;
+}
+
 
 @media (min-width: 768px) {
 
@@ -233,17 +277,60 @@ footer {
         padding: 49px 40px 0px 40px;
     }
 
-    header{
+    .phone-phone-keyboard,
+    .dekstop-phone-keyboard {
+        display: none;
+    }
+
+    .phone-glass-keyboard,
+    .dekstop-glass-keyboard {
+        display: none;
+    }
+
+    .tablet-phone-keyboard {
+        display: block;
+        width: 300px;
+        height: 450px;
+        border-radius: 30px;
+    }
+
+    .tablet-glass-keyboard {
+        display: block;
+        width: 470px;
+        height: 450px;
+        border-radius: 40px;
+    }
+
+    .middle {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        max-width: 100%;
+        flex-direction: column;
         max-width: 688px;
+    }
+
+    .collage {
+        column-gap: 40px;
     }
 
     main {
-        gap: 30px;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
         max-width: 688px;
     }
 
-    .review {
-        margin-top: 131px;
+    .mobile-keyboard,
+    .desktop-keyboard {
+        display: none;
+    }
+
+    .tablet-keyboard {
+        display: flex;
+        width: 500px;
+        border-radius: 20px;
+        margin-left: 100px;
     }
 
     .review h2 {
@@ -260,27 +347,6 @@ footer {
         margin-left: 37px;
     }
 
-    .tablet-keyboard {
-        display: flex;
-    }
-
-
-    .tablet-keyboard {
-        width: 400px;
-        height: 400px;
-        margin-top: 68px;
-        margin-left: 50px;
-    }
-
-    .mobile-keyboard,
-    .desktop-keyboard {
-        display: none;
-    }
-
-    main {
-        display: flex;
-    }
-
     .square {
         display: none;
     }
@@ -289,62 +355,48 @@ footer {
         display: flex;
     }
 
-    .design-review p{
+    .design-review p {
         margin-top: 0;
         width: 398px;
         padding-right: 40px;
     }
 
-  .collage{
-    justify-content: space-between;
-  }
+    .phone-keyboard {
+        width: 270px;
+        margin-left: 0;
+    }
 
-  .middle{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    max-width: 100%;
-    flex-direction: column;
-    max-width: 688px;
-  }
+    .glass-keyboard {
+        width: 478px;
+    }
 
-  .phone-keyboard{
-    width: 270px;
-    margin-left: 0;
-  }
-
-  .glass-keyboard{
-    width: 478px;
-  }
-
-  .design-review{
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: unset;
-}
+    .design-review {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: unset;
+    }
 
     .details {
         margin: auto;
         flex-direction: unset;
         flex-wrap: wrap;
         justify-content: unset;
-        max-width: 688px;
+        width: 757px;
         margin-top: 142px;
     }
 
-    .details {
-        column-gap: 69px;
-    }
+
 
     .box {
         text-align: start;
-        width: 281px;
+        width: 339px;
     }
 
     .box h2 {
         font-size: 24px;
         line-height: 28px;
         margin-top: 40px;
+        width: 180px;
     }
 
     .box p {
@@ -363,92 +415,165 @@ footer {
         margin-top: 0;
     }
 
+    footer {
+        margin-top: 142px;
+        padding-bottom: 43px;
+    }
 
-    @media (min-width:1440px) {
+    .right-square{
+        display: none;
+    }
 
-        body {
-            padding: 64px 165px 0px 165px;
-        }
+    .left-square{
+        display: none;
+    }
 
-        header{
-            width: 1110px;
-        }
+}
 
-        main {    
-            justify-content: unset;
-            width: 100%;
-            max-width: 1110px;
-            justify-content: space-between;
-        }
 
-        header {
-            max-width: 1440px;
-            justify-content: space-between;
-        }
+@media (min-width:1440px) {
 
-        .review {
-            margin-top: 152px;
-        }
+    body {
+        padding: 64px 165px 0px 165px;
+    }
 
-        .middle {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            margin-top: 96px;
-            width: 1110px;
-            max-width: 100%;
-        }
+    .tablet-phone-keyboard,
+    .phone-phone-keyboard {
+        display: none;
+    }
 
-        .collage {
-            gap: 30px;
-        }
+    .tablet-glass-keyboard,
+    .phone-glass-keyboard {
+        display: none;
+    }
 
-        .design-review {
-            flex-direction: column;
-            padding-left: 100px;
-        }
+    .dekstop-phone-keyboard {
+        display: block;
+        width: 250px;
+        height: 450px;
+        border-radius: 25px;
+    }
 
-        .design-review h2 {
-            text-transform: uppercase;
-            font-size: 32px;
-            width: 255px;
-        }
+    .dekstop-glass-keyboard {
+        display: block;
+        width: 450px;
+        height: 450px;
+        border-radius: 25px;
+    }
 
-        .design-review p {
-            margin-top: 27px;
-            max-width: 255px;
-        }
+    header {
+        flex-direction: column;
+        max-width: 1440px;
+        min-width: 327px;
+        justify-content: space-between;
+    }
 
-        .details {
-            column-gap: 30px;
-            flex-wrap: wrap;
-            max-width: 100%;
-        }
+    .keyboard-container {
+        margin-left: 150px;
+    }
 
-        .pair {
-            display: flex;
-        }
+    .right-square {
+        display: flex;
+        height: 240px;
+        width: 255px;
+        margin-left: 10px;
+        margin-bottom: 210px;
+    }
 
-        .box {
-            text-align: start;
-            width: 255px;
+    .left-square{
+        display: block;
+        margin-left: -160px;
+        margin-top: 105px;
+    }
 
-        }
+    main {
+        justify-content: unset;
+        width: 100%;
+        max-width: 1110px;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
 
-        .box h2 {
-            margin-top: 48px;
-        }
+    .mobile-keyboard,
+    .tablet-keyboard {
+        display: none;
+    }
 
-        .box p {
-            margin-top: 24px;
-        }
-
-        footer {
-            padding-bottom: 38px;
-        }
+    .desktop-keyboard {
+        display: block;
+        width:500px;
+        height: 450px;
+        border-radius: 20px;
 
     }
 
+    .keyboard-container{
+        margin-left: 100px;
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-top: 96px;
+        width: 1110px;
+        max-width: 100%;
+    }
+
+    .collage {
+        gap: 30px;
+    }
+
+    .design-review {
+        flex-direction: column;
+        padding-left: 100px;
+        margin-top: 0;
+    }
+
+    .design-review h2 {
+        text-transform: uppercase;
+        font-size: 32px;
+        width: 255px;
+    }
+
+    .design-review p {
+        margin-top: 27px;
+        max-width: 255px;
+        padding-right: 0;
+    }
+
+    .details {
+        column-gap: 30px;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .pair {
+        display: flex;
+    }
+
+    .box {
+        text-align: start;
+        width: 255px;
+    }
+
+    .box h2 {
+        width: 180px;
+    }
+
+    .box h2 {
+        margin-top: 48px;
+    }
+
+    .box p {
+        margin-top: 24px;
+    }
+
+    footer {
+        margin-top: 128px;
+        padding-bottom: 40px;
+    }
 
 }
