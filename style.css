@@ -331,7 +331,7 @@ span {
 
     .tablet-glass-keyboard {
         display: block;
-        width: 420px;
+        width: 450px;
         height: 300px;
         border-radius: 40px;
     }
@@ -365,7 +365,8 @@ span {
         display: flex;
         width: 500px;
         border-radius: 20px;
-        margin-left: 100px;
+        margin-left: 50px;
+        height: 450px;
     }
 
     .review h2 {
