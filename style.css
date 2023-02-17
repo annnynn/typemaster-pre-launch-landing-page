@@ -11,6 +11,7 @@ body {
     height: 100vh;
     padding: 27px 24px 0px 24px;
     font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -39,11 +40,14 @@ header {
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 327px;
 }
 
 .logo {
@@ -59,12 +63,18 @@ button {
     min-width: 150px;
     font-size: 16px;
     line-height: 26px;
+    cursor: pointer;
 }
 
 header,
 button {
     font-weight: 700;
     color: hsla(220, 50%, 17%, 1);
+}
+
+.header-button:hover{
+   background-color: hsla(220, 50%, 17%, 1);
+   color: white;
 }
 
 h4 {
@@ -76,7 +86,7 @@ h4 {
 
 main {
     margin-top: 64px;
-    max-width: 100%;
+    max-width: 327px;
 }
 
 .tablet-phone-keyboard,
@@ -97,10 +107,19 @@ main {
 
 .phone-phone-keyboard {
     display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+
+.blend-mobile {
+    background-color: #f16718;
+    border-radius: 25px;
     width: 150px;
     height: 200px;
     margin-left: -65px;
-    border-radius: 20px;
 }
 
 .phone-glass-keyboard {
@@ -262,11 +281,11 @@ span {
     font-weight: 700;
 }
 
-.right-square{
+.right-square {
     display: none;
 }
 
-.left-square{
+.left-square {
     display: none;
 }
 
@@ -275,6 +294,10 @@ span {
 
     body {
         padding: 49px 40px 0px 40px;
+    }
+
+    nav {
+        max-width: 688px;
     }
 
     .phone-phone-keyboard,
@@ -292,6 +315,14 @@ span {
         width: 300px;
         height: 450px;
         border-radius: 30px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+
+    }
+    
+    .blend-tablet {
+        background-color: #f16718;
+        border-radius: 20px;
     }
 
     .tablet-glass-keyboard {
@@ -380,8 +411,7 @@ span {
         margin: auto;
         flex-direction: unset;
         flex-wrap: wrap;
-        justify-content: unset;
-        width: 757px;
+        justify-content: center;
         margin-top: 142px;
     }
 
@@ -404,6 +434,7 @@ span {
         line-height: 16px;
         font-weight: 500;
         margin-top: 24px;
+        width: 281px;
     }
 
     .row {
@@ -420,12 +451,21 @@ span {
         padding-bottom: 43px;
     }
 
-    .right-square{
+    .right-square {
         display: none;
     }
 
-    .left-square{
+    .left-square {
         display: none;
+    }
+
+    .blend-mobile{
+        display: none;
+    }
+
+    .blend-tablet{
+        display: block;
+
     }
 
 }
@@ -435,6 +475,10 @@ span {
 
     body {
         padding: 64px 165px 0px 165px;
+    }
+
+    nav {
+        max-width: 1440px;
     }
 
     .tablet-phone-keyboard,
@@ -450,14 +494,21 @@ span {
     .dekstop-phone-keyboard {
         display: block;
         width: 250px;
-        height: 450px;
+        height: 480px;
+        border-radius: 25px;
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+    }
+
+    .blend {
+        background-color: #f16718;
         border-radius: 25px;
     }
 
     .dekstop-glass-keyboard {
         display: block;
-        width: 450px;
-        height: 450px;
+        width: 500px;
+        height: 480px;
         border-radius: 25px;
     }
 
@@ -468,30 +519,32 @@ span {
         justify-content: space-between;
     }
 
-    .keyboard-container {
-        margin-left: 150px;
-    }
-
-    .right-square {
-        display: flex;
-        height: 240px;
-        width: 255px;
-        margin-left: 10px;
-        margin-bottom: 210px;
-    }
-
-    .left-square{
-        display: block;
-        margin-left: -160px;
-        margin-top: 105px;
-    }
-
     main {
         justify-content: unset;
         width: 100%;
         max-width: 1110px;
         justify-content: space-between;
         margin-top: 70px;
+    }
+
+    .keyboard-container {
+        width: 400px;
+        margin-left: 100px;
+    }
+
+    .right-square {
+        display: flex;
+        height: 240px;
+        width: 255px;
+        margin-left: 180px;
+        margin-bottom: 360px;
+
+    }
+
+    .left-square {
+        display: block;
+        margin-left: -170px;
+        margin-top: 120px;
     }
 
     .mobile-keyboard,
@@ -501,14 +554,10 @@ span {
 
     .desktop-keyboard {
         display: block;
-        width:500px;
-        height: 450px;
+        width: 700px;
+        height: 600px;
         border-radius: 20px;
 
-    }
-
-    .keyboard-container{
-        margin-left: 100px;
     }
 
     .middle {
@@ -517,8 +566,8 @@ span {
         flex-wrap: nowrap;
         align-items: center;
         margin-top: 96px;
-        width: 1110px;
-        max-width: 100%;
+        max-width: 1110px;
+
     }
 
     .collage {
